@@ -35,7 +35,7 @@ public class DemoService {
 	}
 
 	@Scheduled(fixedDelay = 3000)
-	public void copyFile() throws Exception {
+	public void sleep() throws Exception {
 		int n = new Random().nextInt(3000);
 
 		timer.record(() -> {
