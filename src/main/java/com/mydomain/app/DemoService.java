@@ -31,7 +31,8 @@ public class DemoService {
 
 		counter = Counter.builder("sleep.count").register(registry);
 
-		Gauge.builder("free.disk.space", "/", path -> new File(path).getFreeSpace()).baseUnit("bytes").register(registry);
+		Gauge.builder("free.disk.space", "/", path -> new File(path).getFreeSpace()).baseUnit("bytes")
+				.register(registry);
 	}
 
 	@Scheduled(fixedDelay = 3000)
